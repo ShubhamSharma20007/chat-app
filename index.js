@@ -11,10 +11,9 @@ dbConnection()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-    origin: '*',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-}))
+    origin: 'https://chat-application-vite.netlify.app',
+    credentials: true,
+}));
 
 
 app.use('/api/v1/auth', routes)
